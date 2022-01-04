@@ -1,4 +1,8 @@
 class ArticlesController < ApplicationController
+  def show
+    @article = Article.find(params[:id])
+  end
+  
   def new
   end
 
@@ -15,3 +19,12 @@ class ArticlesController < ApplicationController
   end
 
 end
+
+# place standard CRUD actions in following order:
+  # index
+  # show
+  # new
+  # edit
+  # create
+  # update
+  # destroy
